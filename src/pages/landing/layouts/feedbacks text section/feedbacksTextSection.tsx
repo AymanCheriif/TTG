@@ -7,7 +7,7 @@ import feedback1 from "../../../../assets/feedback.png";
 import feedback2 from "../../../../assets/feedback2.png";
 import feedback3 from "../../../../assets/feedback3.png";
 import feedback4 from "../../../../assets/feedback4.png";
-import feedback5 from "../../../../assets/feedback5.jpg";
+import feedback5 from "../../../../assets/feedback3.png";
 import feedback6 from "../../../../assets/feedback6.png";
 import feedback7 from "../../../../assets/feedback7.png";
 import feedback8 from "../../../../assets/feedback8.png";
