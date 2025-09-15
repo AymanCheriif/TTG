@@ -1,0 +1,147 @@
+/* Students section styles */
+.students_section {
+  padding: 8rem 18.75rem;
+}
+
+.section_container {
+  width: 100%;
+}
+
+.text_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0;
+  text-align: center;
+}
+
+.title span {
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.description {
+  color: #a4a4a4;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 830px;
+}
+
+.feedbacks_cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feedback_card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.feedback_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.studentsVideoFadeIn {
+  animation: fadeInUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1600px) {
+  .students_section {
+    padding: 8rem 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .feedbacks_cont {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .students_section {
+    padding: 8rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .feedbacks_cont {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .feedback_card {
+    flex: 1;
+    width: 100%;
+    min-width: 280px;
+  }
+
+  .feedback_card img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .students_section {
+    padding: 8rem 1.25rem;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}

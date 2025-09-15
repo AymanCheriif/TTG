@@ -1,0 +1,131 @@
+/* Highlights Section */
+.highlights_section {
+  padding: 4rem 18.75rem;
+}
+
+.section_container {
+  width: 100%;
+}
+
+/* Section Title Styling */
+.section_title {
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section_title span {
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.highlights_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.highlight_card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.highlight_card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 20px rgba(106, 0, 170, 0.1);
+}
+
+.highlight_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(218, 33, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.highlight_content {
+  flex: 1;
+}
+
+.highlight_title {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.highlight_description {
+  color: #a4a4a4;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1600px) {
+  .highlights_section {
+    padding: 4rem 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section_title {
+    font-size: 48px;
+  }
+
+  .highlight_description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .highlights_grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .highlights_section {
+    padding: 4rem 2.5rem;
+  }
+
+  .highlight_title {
+    font-size: 16px;
+  }
+
+  .highlight_description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .highlights_section {
+    padding: 4rem 1.25rem;
+  }
+
+  .highlights_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section_title {
+    font-size: 36px;
+  }
+}

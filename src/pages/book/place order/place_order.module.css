@@ -1,0 +1,104 @@
+/* Base container with mobile-first approach */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+  contain: layout style paint;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Order Section */
+.order_section {
+  padding: 8rem 18.75rem;
+  min-height: 100vh;
+}
+
+.section_container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page_title {
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0 0 60px 0;
+  text-align: center;
+}
+
+.order_grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Order Form Container */
+.order_form_container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.order_form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .order_section {
+    padding: 8rem 50px;
+  }
+
+  .page_title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .order_grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .order_form_container {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order_section {
+    padding: 6rem 20px;
+  }
+
+  .page_title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .order_form_container {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .order_section {
+    padding: 6rem 16px;
+  }
+
+  .page_title {
+    font-size: 28px;
+  }
+
+  .order_form_container {
+    padding: 20px;
+  }
+}

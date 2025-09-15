@@ -1,0 +1,100 @@
+/* Place Order Button */
+.place_order_btn {
+  display: flex;
+  padding: 1.25rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6a00f4 0%, #200044 100%);
+  color: #fff;
+  font-family: Aeonik, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.5), 0 6px 12px rgba(0, 0, 0, 0.4),
+    0 3px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.place_order_btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.place_order_btn:not(:disabled):hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.6), 0 8px 16px rgba(0, 0, 0, 0.45),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.place_order_btn:not(:disabled):active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gloss effect for button */
+.place_order_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.05) 60%
+  );
+  transform: skewX(-20deg);
+  animation: shine 4s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  50% {
+    transform: translateX(100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-20deg);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .place_order_btn {
+    font-size: 18px;
+    padding: 1rem 1.5rem;
+  }
+}

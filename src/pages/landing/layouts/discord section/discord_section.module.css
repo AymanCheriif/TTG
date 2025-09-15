@@ -1,0 +1,129 @@
+.discordSection {
+}
+
+.discordSection .discordContent {
+  display: flex;
+  padding: 8rem 18.75rem;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discordSection .discordContent .imageContainer {
+  max-width: 643px;
+  height: auto;
+  flex: 1;
+  flex-shrink: 0;
+  aspect-ratio: 93 / 58;
+}
+
+.discordSection .discordContent .imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.discordSection .discordContent .textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.discordSection .discordContent .textContent .tag {
+  display: flex;
+  padding: 0.625rem 1.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 33px;
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  color: #dadada;
+  font-family: Aeonik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.discordSection .discordContent .textContent h1 {
+  color: #fff;
+  font-family: Aeonik;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 60px */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.discordSection .discordContent .textContent h1 span {
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.discordSection .discordContent .textContent p {
+  color: #b1b1b1;
+  font-family: Aeonik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+@media screen and (max-width: 1600px) {
+  .discordSection .discordContent {
+    padding: 4rem 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .discordSection .discordContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .discordSection .discordContent .imageContainer {
+    aspect-ratio: auto;
+  }
+
+  .discordSection .discordContent .textContent {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .discordSection .discordContent {
+    padding: 2rem;
+  }
+
+  .discordSection .discordContent .textContent h1 {
+    font-size: 36px;
+  }
+
+  .discordSection .discordContent .textContent p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .discordSection .discordContent {
+    padding: 1rem;
+  }
+
+  .discordSection .discordContent .textContent h1 {
+    font-size: 28px;
+  }
+
+  .discordSection .discordContent .textContent p {
+    font-size: 14px;
+  }
+}

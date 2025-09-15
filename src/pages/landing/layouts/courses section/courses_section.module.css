@@ -1,0 +1,404 @@
+.coursesSection {
+  background-image: url("../../../../assets/neurons_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.coursesSection .courseContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.coursesSection .courseContainer .carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.coursesSection .courseContainer .carousel .carouselButtons {
+  display: flex;
+  width: 74rem;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.coursesSection .courseContainer .carousel .carouselButtons .btnLeft {
+  display: flex;
+  padding: 0.25rem 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 99px;
+  border: 2px solid #4f00aa;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+.coursesSection .courseContainer .carousel .carouselButtons .btnRight {
+  display: flex;
+  padding: 0.25rem 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 99px;
+  border: 2px solid #4f00aa;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+.coursesSection .courseContainer .carousel .carouselCourses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.coursesSection .courseContainer .carousel .carouselCourses .courseItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  gap: 1rem;
+  position: relative;
+}
+
+.courseItem.active .courseContainer {
+  box-shadow: 0 0px 10px #4f00aa;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.courseItem video {
+  width: 55.8125rem;
+  aspect-ratio: 16/9;
+  border-radius: 0.625rem;
+}
+
+.courseItem .courseContainer {
+  position: relative;
+  gap: 1rem;
+  height: fit-content;
+}
+
+.courseItem video {
+  max-width: 55.8125rem;
+  aspect-ratio: 16/9;
+  border-radius: 0.625rem;
+}
+
+.coursesSection
+  .courseContainer
+  .carousel
+  .carouselCourses
+  .courseItem
+  .courseOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coursesSection
+  .courseContainer
+  .carousel
+  .carouselCourses
+  .courseItem
+  .courseOverlay
+  .playButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.courseName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.courseName span {
+  color: #fff;
+  font-family: Aeonik;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.coursesSection .courseContainer .indicators {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coursesSection .courseContainer .indicators .indicator {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+}
+
+.coursesSection .courseContainer .indicators .indicatorActive {
+  background: linear-gradient(180deg, #6000aa 0%, #4f00aa 100%) !important;
+  stroke-width: 1px;
+  stroke: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 99px;
+}
+
+.coursesSection .textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 800px;
+  position: relative;
+  z-index: 10;
+}
+
+.coursesSection .textContent .tag {
+  border-radius: 33px;
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  color: #dadada;
+  font-family: Aeonik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.coursesSection .textContent h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Aeonik;
+  font-size: var(--sizes-H1, 61px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 76.25px */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.coursesSection .textContent h1 span {
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coursesSection .textContent p {
+  color: #dadada;
+  text-align: center;
+  font-family: Aeonik;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.coursesSection > .courseContainer {
+  padding: 4rem 0;
+}
+
+.spinnerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #4f00aa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .carouselButtons {
+    width: 50rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .coursesSection .textContent {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .coursesSection .textContent h1 {
+    font-size: 3rem;
+  }
+
+  .coursesSection .textContent .tag {
+    font-size: 1.125rem;
+    padding: 8px 24px;
+  }
+
+  .coursesSection .textContent p {
+    font-size: 1.125rem;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .courseItem video {
+    max-width: 41rem;
+  }
+
+  .carouselButtons {
+    width: 40rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 1rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .coursesSection .courseContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .coursesSection .textContent {
+    padding: 0 1.5rem;
+    gap: 12px;
+  }
+
+  .coursesSection .textContent h1 {
+    font-size: 2.25rem;
+  }
+
+  .coursesSection .textContent .tag {
+    font-size: 1rem;
+    padding: 6px 20px;
+  }
+
+  .coursesSection .textContent p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .courseItem video {
+    max-width: 31rem;
+  }
+
+  .carouselButtons {
+    width: 30rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 1rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .courseItem video {
+    max-width: 25rem;
+  }
+
+  .carouselButtons {
+    width: 23rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .coursesSection .textContent {
+    padding: 0 1rem;
+    gap: 10px;
+  }
+
+  .coursesSection .textContent h1 {
+    font-size: 1.75rem;
+  }
+
+  .coursesSection .textContent .tag {
+    font-size: 0.875rem;
+    padding: 5px 16px;
+  }
+
+  .coursesSection .textContent p {
+    font-size: 0.875rem;
+  }
+
+  .coursesSection .courseContainer {
+    gap: 1rem;
+  }
+
+  .courseName {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .courseName span {
+    font-size: 1rem !important;
+  }
+
+  .courseName svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+}

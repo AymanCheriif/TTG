@@ -1,0 +1,306 @@
+.feedbackVideos {
+}
+
+.feedbackVideos > .videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.feedbackVideos .videoContainer .carousel {
+  position: relative;
+}
+
+.feedbackVideos .videoContainer .carousel .carouselButtons {
+  display: flex;
+  width: 74rem;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.feedbackVideos .videoContainer .carousel .carouselButtons .btnLeft {
+  display: flex;
+  padding: 0.25rem 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 99px;
+  border: 2px solid #4f00aa;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+.feedbackVideos .videoContainer .carousel .carouselButtons .btnRight {
+  display: flex;
+  padding: 0.25rem 1.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 99px;
+  border: 2px solid #4f00aa;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+.feedbackVideos .videoContainer .carousel .carouselVideos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.feedbackVideos .videoContainer .carousel .carouselVideos .videoItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  gap: 1rem;
+  position: relative;
+}
+
+.videoItem .videoContainer {
+  position: relative;
+  gap: 1rem;
+  height: fit-content;
+  background-color: black;
+}
+
+.videoItem.active .videoContainer {
+  box-shadow: 0 0px 10px #4f00aa;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.videoItem video {
+  width: 55.8125rem;
+  aspect-ratio: 16/9;
+  border-radius: 0.625rem;
+}
+
+.feedbackVideos
+  .videoContainer
+  .carousel
+  .carouselVideos
+  .videoItem
+  .videoOverlay {
+}
+
+.feedbackVideos
+  .videoContainer
+  .carousel
+  .carouselVideos
+  .videoItem
+  .videoOverlay
+  .playButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.studentName {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.studentName span {
+  color: #fff;
+  font-family: Aeonik;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.feedbackVideos .videoContainer .indicators {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feedbackVideos .videoContainer .indicators .indicator {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+}
+
+.feedbackVideos .videoContainer .indicators .indicatorActive {
+  background: linear-gradient(180deg, #6000aa 0%, #4f00aa 100%) !important;
+  stroke-width: 1px;
+  stroke: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 99px;
+}
+
+.spinnerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #4f00aa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .carouselButtons {
+    width: 50rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .videoItem video {
+    max-width: 41rem;
+  }
+
+  .carouselButtons {
+    width: 40rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 1rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .feedbackVideos .videoContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .videoItem video {
+    max-width: 31rem;
+  }
+
+  .carouselButtons {
+    width: 30rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 1rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .feedbackVideos > .videoContainer:first-child {
+    padding: 2rem 0;
+  }
+
+  .videoItem {
+    gap: 0 !important;
+  }
+
+  .videoItem .studentName {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .videoItem video {
+    max-width: 24rem;
+  }
+
+  .carouselButtons {
+    width: 23rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .studentName {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .studentName span {
+    font-size: 1rem !important;
+  }
+
+  .studentName svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .videoItem .studentName {
+    padding: 1rem 0;
+  }
+
+  .carouselButtons {
+    transform: translate(-50%, -100%) !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .videoItem video {
+    max-width: 22rem;
+  }
+
+  .carouselButtons {
+    width: 20rem !important;
+  }
+
+  .carouselButtons .btnRight,
+  .carouselButtons .btnLeft {
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .carouselButtons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .studentName span {
+    font-size: 0.875rem !important;
+  }
+}

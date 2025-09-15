@@ -1,0 +1,13 @@
+* {
+  font-family: "Aeonik Regular";
+}
+
+.moneybg {
+  aspect-ratio: 103 / 114;
+  background-image: url(/src/assets/background_money.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}

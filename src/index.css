@@ -1,0 +1,85 @@
+* {
+  font-family: "Aeonik Regular";
+}
+
+h1 {
+  color: #fff;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./assets/text_texture.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body {
+  background-color: #000;
+  background-image: url("./assets/background.webp");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+body::after {
+  content: "";
+  height: 200%;
+  width: 413px;
+  top: -200px;
+  opacity: 0.95;
+  background: #000;
+  filter: blur(50px);
+  right: -200px;
+  position: fixed;
+  z-index: 10;
+}
+
+body::before {
+  content: "";
+  height: 200%;
+  width: 413px;
+  top: -200px;
+  opacity: 0.95;
+  background: #000;
+  filter: blur(50px);
+  left: -200px;
+  position: fixed;
+  z-index: 10;
+}
+
+@media screen {
+  body {
+    max-width: 2100px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  body::after {
+    width: 213px;
+  }
+
+  body::before {
+    width: 213px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body::after {
+    display: none;
+  }
+
+  body::before {
+    display: none;
+  }
+}

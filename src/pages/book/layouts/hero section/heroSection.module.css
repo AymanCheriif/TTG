@@ -1,0 +1,286 @@
+.hero_section {
+  margin-bottom: 60px;
+  padding: 8rem 18.75rem;
+  background-image: url("../../../../assets/trading_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section_container {
+  width: 100%;
+}
+
+.book_details_grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 2fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.book_cover_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.book_cover_highlight {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book_cover {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+  transform: rotateY(-5deg);
+  transition: transform 0.5s ease;
+  aspect-ratio: 2/3;
+}
+
+.book_cover:hover {
+  transform: rotateY(0deg) scale(1.05);
+}
+
+.book_info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.book_header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category_badge {
+  display: flex;
+  padding: 0.625rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 33px;
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  color: #dadada;
+  font-family: Aeonik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: fit-content;
+  text-transform: capitalize;
+}
+
+.book_title {
+  color: #fff;
+  font-family: Aeonik;
+  font-size: 3.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.book_title span {
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: "Aeonik";
+}
+
+.author_info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.by_text {
+  color: #a4a4a4;
+  font-size: 14px;
+}
+
+.author_name {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.book_description {
+  color: #a4a4a4;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.price_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.price_label {
+  color: #a4a4a4;
+  font-size: 18px;
+}
+
+.book_price {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #da21ff 0%, #4f00aa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.limited_supply_badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: rgba(218, 33, 255, 0.1);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.limited_supply_badge span {
+  color: #da21ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1600px) {
+  .hero_section {
+    padding: 8rem 5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .book_details_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .book_cover_highlight {
+    max-width: 500px;
+  }
+
+  .book_info_container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .book_header {
+    align-items: center;
+  }
+
+  .category_badge {
+    align-self: center;
+  }
+
+  .author_info {
+    justify-content: center;
+  }
+
+  .price_container {
+    justify-content: center;
+  }
+
+  .limited_supply_badge {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero_section {
+    padding: 3rem 2.5rem;
+  }
+
+  .book_details_grid {
+    gap: 1rem;
+  }
+
+  .book_title {
+    font-size: 2.5rem;
+    max-width: 28rem;
+  }
+
+  .book_description {
+    font-size: 1rem;
+    max-width: 28rem;
+  }
+
+  .book_info_container {
+    gap: 1rem;
+    max-width: 590px;
+  }
+
+  .book_cover_highlight {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero_section {
+    padding: 3rem 1.25rem;
+  }
+
+  .book_title {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .book_description {
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+
+  .book_info_container {
+    gap: 0.75rem;
+    max-width: 390px;
+  }
+
+  .book_cover_highlight {
+    max-width: 100%;
+  }
+
+  .price_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .author_name {
+    font-size: 20px;
+  }
+
+  .book_price {
+    font-size: 32px;
+  }
+}

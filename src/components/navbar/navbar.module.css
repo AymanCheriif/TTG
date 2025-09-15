@@ -1,0 +1,268 @@
+/* Header styles */
+.header {
+  display: flex;
+  padding: 1.5rem 18.75rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: -webkit-fill-available;
+  margin: 0 auto;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: auto;
+  max-height: 40px;
+}
+
+/* Navigation list styles */
+.header ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.header ul li {
+  list-style: none;
+  position: relative;
+}
+
+.header ul li a {
+  color: #fff;
+  font-family: Aeonik;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdownArrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdownArrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(48, 48, 48, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+}
+
+.dropdownMenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+  gap: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.dropdownMenu li {
+  list-style: none;
+  padding: 0;
+  width: -webkit-fill-available;
+}
+
+.dropdownMenu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff !important;
+  text-decoration: none;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem !important;
+}
+
+.dropdownMenu li a img {
+  width: 20px !important;
+  height: auto;
+}
+
+.dropdownMenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header .mobileMenu {
+  position: fixed;
+  top: 78px;
+  width: 80%;
+  background-color: rgb(48, 48, 48);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.mobileMenu.closed {
+  height: 0;
+}
+
+.mobileMenu.open {
+  height: auto;
+  max-height: 400px;
+}
+
+.header .mobileMenu > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+.header .mobileMenu > ul li {
+  width: -webkit-fill-available;
+}
+
+/* Mobile dropdown styles */
+.mobileMenu .dropdown {
+  position: relative;
+}
+
+.mobileMenu .dropdownMenu {
+  position: static;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileMenu .dropdownMenu.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 200px;
+  padding: 0.5rem 0;
+}
+
+.mobileMenu .dropdownMenu li a {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Actions section styles */
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: 0;
+  display: none;
+}
+
+@media screen and (max-width: 1600px) {
+  .header {
+    padding: 1.5rem 5rem;
+  }
+
+  .header ul {
+    gap: 1.5rem;
+  }
+
+  .header ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+
+  .header ul {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: block !important;
+  }
+
+  .menuButton {
+    display: block !important;
+  }
+
+  .logo {
+    transform: translateX(15px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 1rem 1.25rem;
+  }
+
+  .header ul li a {
+    font-size: 0.875rem;
+  }
+
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
+
+  .mobileMenu {
+    top: 64px !important;
+  }
+
+  .actions {
+    gap: 0.5rem;
+  }
+}
