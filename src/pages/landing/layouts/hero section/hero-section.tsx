@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import CtaButton from "../../../../components/ctabtn/ctabtn";
 import styles from "./hero.module.css";
-import trailer from "../../../../assets/trailer.mp4";
+import trailer from "../../../../assets/Trailer.mp4";
 import person1 from "../../../../assets/bot1.png";
 import person2 from "../../../../assets/bot2.png";
 import person3 from "../../../../assets/bot3.png";
